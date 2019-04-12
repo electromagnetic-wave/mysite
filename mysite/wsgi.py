@@ -12,7 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings.production")
-
-application = get_wsgi_application()
 with open(r'/home/mysite_debug.log','w',encoding='utf-8') as f:
-	f.write(os.environ['DJANGO_SETTINGS_MODULE'])
+	f.write('wsgi')
+application = get_wsgi_application()
